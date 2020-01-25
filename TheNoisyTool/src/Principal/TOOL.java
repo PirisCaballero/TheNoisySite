@@ -5,9 +5,8 @@ public class TOOL {
 	public TOOL() {
 		
 	}
-	
-	public static void main(String[] args) {
-		System.out.println("Probando ant y el IDE");
+	public String alive () {
+		String al = "Yes Alive 2";
+		return al;
 	}
-
 }
