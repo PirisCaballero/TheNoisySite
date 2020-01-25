@@ -6,7 +6,7 @@ public class TOOL {
 		
 	}
 	public String alive () {
-		String al = "Yes Alive 2";
+		String al = "Yes Alive!";
 		return al;
 	}
 }
