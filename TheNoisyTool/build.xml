@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="TheNoisySite" default="build">
+	
+	<target name="build" depends="empaqueta, documenta , jar">
+	</target>
+	
+	<target name="empaqueta" depends="compila">
+		<jar destfile="../jar/TheNoisyTool.jar" includes="../class/**/*.class"/>
+	</target>
+	
+	<target name="compila" >
+		<javac includeantruntime="false" srcdir="../TheNoisyTool/src" destdir="../TheNoisyTool/bin"/>
+	</target>
+	
+	<target name="documenta">
+		<javadoc sourcepath="../TheNoisyTool/src" destdir="../TheNoisyTool/javadoc" packagenames = "Principal"  />
+	</target>
+	
+	 <target name="jar" depends="compila" description="crear un archivo Jar para la aplicación">
+	        <jar destfile="../TheNoisyTool/hello.jar">
+	            <fileset dir="../TheNoisyTool/bin" includes="**/*.class"/>
+	            <manifest>
+	                <attribute name="Main-Class" value="HelloProgram"/>
+	            </manifest>
+	        </jar>
+	    </target>
+	
+</project>
