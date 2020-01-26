@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Aitor/git/TheNoisySite/TheNoisyTool/JARS/TheNoisyTool.jar"/>
+	<classpathentry kind="lib" path="/TheNoisyTool/libs/mysql-connector-java-8.0.19.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
