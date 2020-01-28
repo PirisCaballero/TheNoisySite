@@ -22,7 +22,7 @@
 	</target>
 	
 	<target name="jar" depends="compila" description="crear un archivo Jar para la aplicación">
-		<jar destfile="../TheNoisyTool/JARS/TheNoisyTool.jar">
+		<jar destfile="../TheNoisyProject/libs/TheNoisyTool.jar">
 	    	<fileset dir="../TheNoisyTool/bin" includes="**/*.class"/>
 		</jar>
 	</target>
