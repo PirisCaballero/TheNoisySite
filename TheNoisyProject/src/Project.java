@@ -4,9 +4,10 @@ import Connections.Connect;
 import window.ProjectWindow;
 
 public class Project {
+	private static Thread sc;
 	
 	private static void connect_to_server(DATA_PACK ser_conn) {
-		Thread sc = new Thread () {
+		sc = new Thread () {
 			@Override
 			public void run () {
 				try {
@@ -18,6 +19,11 @@ public class Project {
 			}
 		};
 		sc.start();
+	}
+	@SuppressWarnings("deprecation")
+	private static void kill_server_conn () {
+		sc.stop();
+		ProjectWindow.update_server_conn_status("Closed D:");
 	}
 	
 	
@@ -34,6 +40,7 @@ public class Project {
 		String base = "thenoisysite";
 		ser_conn.add_value("server", server);ser_conn.add_value("USER", user);ser_conn.add_value("PASS", pass);ser_conn.add_value("BASE", base);
 		connect_to_server(ser_conn);
-		ProjectWindow w = new ProjectWindow();
+		ProjectWindow w = new ProjectWindow("Connecting...");
+		//kill_server_conn();
 	}
 }

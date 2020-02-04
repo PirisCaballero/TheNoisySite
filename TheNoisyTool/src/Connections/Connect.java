@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import Data_Encapsulation.DATA_PACK;
+import window.ProjectWindow;
 
 public class Connect {
 	
@@ -13,11 +14,12 @@ public class Connect {
 		try {
 			connection = DriverManager.getConnection("jdbc:mysql://"+server.get_Value_by_Key("server")+":3306/"+server.get_Value_by_Key("BASE")
 				,server.get_Value_by_Key("USER"), server.get_Value_by_Key("PASS") );
-			System.out.println("Connected!");
+			ProjectWindow.update_server_conn_status("Conected! ");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e);
 			e.printStackTrace();
+			ProjectWindow.update_server_conn_status("Closed D:");
 		}
 	}
 
