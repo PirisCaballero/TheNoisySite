@@ -18,12 +18,12 @@ public class Connect {
 			cliente.connect(ftp.get_Value_by_Key("server"));
 			boolean login = cliente.login(ftp.get_Value_by_Key("USER"), ftp.get_Value_by_Key("PASS"));
 			System.out.println(login);
-			//ProjectWindow.update_server_conn_status("Conected!");
+			ProjectWindow.update_server_conn_status("Conected!");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println(e);
 			e.printStackTrace();
-			//ProjectWindow.update_server_conn_status("Closed D:");
+			ProjectWindow.update_server_conn_status("Closed D:");
 		}
 	}
 

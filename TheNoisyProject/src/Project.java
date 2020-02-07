@@ -39,7 +39,7 @@ public class Project {
 		ftp_conn.add_value("server", server2); ftp_conn.add_value("USER", user2); ftp_conn.add_value("PASS", pass2);
 		ser_conn.add_value("server", server);ser_conn.add_value("USER", user);ser_conn.add_value("PASS", pass);ser_conn.add_value("BASE", base);
 		ProjectWindow w = new ProjectWindow("Connecting...");
-		//connect_to_server(ser_conn , ftp_conn);
+		connect_to_server(ser_conn , ftp_conn);
 		//kill_server_conn();
 	}
 }

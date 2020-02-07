@@ -16,10 +16,13 @@ public class ProjectWindow {
 	protected static JLabel ser_conn_status =  new JLabel();
 	protected static JLabel loading = new JLabel();
 	private static JFrame window;
+	private static JPanel panel_sur;
 	public static void update_server_conn_status (String new_status) {
 		if(new_status == "Conected!") {
 			ser_conn_status.setText(new_status);
-			//loading.setIcon(new ImageIcon("ResourceFolder/img/re-HUD.gif"));
+			loading.setIcon(new ImageIcon("ResourceFolder/img/re-HUD.gif"));
+			loading.setBounds(980 , 0 , 80 ,50);
+			panel_sur.setBackground(Color.black);
 		}
 	}
 	
@@ -41,7 +44,7 @@ public class ProjectWindow {
 		panel_superior.setBounds(0 , 0 , 1080 , 50);
 		panel_superior.setBorder( BorderFactory.createLineBorder(Color.RED));
 		
-		JPanel panel_sur = new JPanel();
+		panel_sur = new JPanel();
 		panel_sur.setLayout(null);
 		panel_sur.setBounds(0 , 670, 1080 , 50);
 		panel_sur.setBackground( new Color(28 , 29 , 33) );
