@@ -3,6 +3,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/TheNoisyTool/libs/mysql-connector-java-8.0.19.jar"/>
-	<classpathentry kind="lib" path="/TheNoisySite/TheNoisyProject/libs/TheNoisyTool.jar"/>
+	<classpathentry kind="lib" path="libs/TheNoisyTool.jar"/>
+	<classpathentry kind="lib" path="/TheNoisyTool/libs/commons-net-3.6-sources.jar"/>
+	<classpathentry kind="lib" path="/TheNoisyTool/libs/commons-net-3.6.jar"/>
+	<classpathentry kind="lib" path="/TheNoisyTool/libs/commons-net-examples-3.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
