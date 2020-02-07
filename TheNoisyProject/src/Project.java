@@ -27,11 +27,6 @@ public class Project {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		DATA_PACK dt = new DATA_PACK("prueba");
-		TOOL t = new TOOL();
-		dt.add_value("TOOL", t.alive());
-		dt.to_String();
-		
 		DATA_PACK ser_conn = new DATA_PACK("Server_Connection_Data");
 		String server = "thenoisyboy16.ovh";
 		String server2 = "83.213.204.144";
@@ -44,7 +39,7 @@ public class Project {
 		ftp_conn.add_value("server", server2); ftp_conn.add_value("USER", user2); ftp_conn.add_value("PASS", pass2);
 		ser_conn.add_value("server", server);ser_conn.add_value("USER", user);ser_conn.add_value("PASS", pass);ser_conn.add_value("BASE", base);
 		ProjectWindow w = new ProjectWindow("Connecting...");
-		connect_to_server(ser_conn , ftp_conn);
+		//connect_to_server(ser_conn , ftp_conn);
 		//kill_server_conn();
 	}
 }
