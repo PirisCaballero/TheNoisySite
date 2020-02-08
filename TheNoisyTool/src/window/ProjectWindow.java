@@ -30,7 +30,11 @@ public class ProjectWindow {
 			ser_conn_status.setBounds(850 , 0 , 150 , 50);
 			loading.setIcon(new ImageIcon("ResourceFolder/img/re-loader02.gif"));
 			loading.setBounds(1000 , 0 , 80 ,50);
+			panel_sur.setBackground( new Color(28 , 29 , 33) );
 		}
+	}
+	public JFrame get_window() {
+		return window;
 	}
 	
 	public ProjectWindow(String status) throws IOException{

@@ -1,18 +1,21 @@
 import Principal.TOOL;
 import Data_Encapsulation.DATA_PACK;
+
+import javax.swing.JFrame;
+
 import Connections.Connect;
 import window.ProjectWindow;
 
 public class Project {
 	private static Thread sc;
 	
-	private static void connect_to_server(DATA_PACK ser_conn , DATA_PACK ftp) {
+	private static void connect_to_server(DATA_PACK ser_conn , DATA_PACK ftp , JFrame win) {
 		sc = new Thread () {
 			@Override
 			public void run () {
 				try {
 					Connect conn = new Connect();
-					conn.Connect(ser_conn, ftp);
+					conn.Connect(ser_conn, ftp , win);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -41,7 +44,7 @@ public class Project {
 		ftp_conn.add_value("server", server2); ftp_conn.add_value("USER", user2); ftp_conn.add_value("PASS", pass2);
 		ser_conn.add_value("server", server);ser_conn.add_value("USER", user);ser_conn.add_value("PASS", pass);ser_conn.add_value("BASE", base);
 		ProjectWindow w = new ProjectWindow("Connecting...");
-		connect_to_server(ser_conn , ftp_conn);
+		connect_to_server(ser_conn , ftp_conn , w.get_window());
 		//kill_server_conn();
 	}
 }
