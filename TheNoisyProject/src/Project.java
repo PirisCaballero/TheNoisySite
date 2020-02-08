@@ -11,10 +11,12 @@ public class Project {
 			@Override
 			public void run () {
 				try {
-					Connect conn = new Connect(ser_conn , ftp);
+					Connect conn = new Connect();
+					conn.Connect(ser_conn, ftp);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					ProjectWindow.update_server_conn_status("Closed D:" , true);
 				}
 			}
 		};
@@ -23,7 +25,7 @@ public class Project {
 	@SuppressWarnings("deprecation")
 	private static void kill_server_conn () {
 		sc.stop();
-		ProjectWindow.update_server_conn_status("Closed D:");
+		ProjectWindow.update_server_conn_status("Closed D:" , false);
 	}
 	
 	public static void main(String[] args) throws Exception {
