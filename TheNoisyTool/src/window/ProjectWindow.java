@@ -1,6 +1,7 @@
 package window;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -80,6 +81,12 @@ public class ProjectWindow {
 		loading.setBounds(1000 , 0 , 80 ,50);
 		panel_sur.add(loading);
 		panel_sur.add(ser_conn_status);
+		JLabel logo = new JLabel("TheNoisyboy16.ovh");
+		logo.setBounds(50 , 0 , 250 , 50 );
+		logo.setForeground(Color.white);
+		String font_name = "Gill Sans,Gill Sans MT,Calibri,sans-serif";
+		logo.setFont( new Font(font_name, 10, 20));
+		panel_sur.add(logo);
 		
 		window.getContentPane().add(panel_superior);
 		window.getContentPane().add(panel_central);
